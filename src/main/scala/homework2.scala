@@ -8,5 +8,10 @@ object homework2 extends App {
   def multiplication(x:Int, y: Int) = x*y
 
   val result = (numbers.view.map(n => n*n)).filter(n => n%2 == 1).reduce(multiplication)
+  //reduce(_*_)
   println(result)
+
+  def multBig (a: BigInt, b: BigInt) = a*b
+
+
 }
