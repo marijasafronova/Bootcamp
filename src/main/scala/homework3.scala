@@ -21,13 +21,16 @@ object homework3 extends App {
     var rCount = 0
     var lCount = 0
     if (text.head == ')'|| text(text.size-1) == '(')
+      return false
+    else {
        for (ch <- text)
            if (ch == '(') lCount=lCount+1
             else if (ch == ')') rCount=rCount+1
-      if (rCount == lCount) true
+    }
+    if (rCount == lCount) true
       else false
   }
 
-  print(areParenthesisMatching(")("))
+  print(areParenthesisMatching("()()"))
 
 }
