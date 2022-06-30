@@ -152,11 +152,17 @@ WHERE (Milliseconds/1000)/60 > 5;
 
 --second task
 
-SELECT * 
-CONCAT (firstname, " ", lastname)
-AS full_name
-FROM customers c ;
+CREATE INDEX idx_combined
+ON customers (LENGTH(FirstName) + LENGTH(LastName));
 
+SELECT *
+FROM customers c 
+WHERE (LENGTH(FirstName) + LENGTH(LastName)) > 20;
+
+EXPLAIN QUERY PLAN
+SELECT *
+FROM customers c
+WHERE (LENGTH(FirstName) + LENGTH(LastName)) > 20;
 
 
 
