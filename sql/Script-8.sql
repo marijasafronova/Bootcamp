@@ -140,6 +140,7 @@ ON tracks (milliseconds); --can't create unique indexes
 
 SELECT * FROM tracks;
 
+---- first task 
 SELECT * FROM tracks
 WHERE (Milliseconds/1000)/60 > 5;
 
@@ -147,6 +148,9 @@ WHERE (Milliseconds/1000)/60 > 5;
 EXPLAIN QUERY PLAN
 SELECT * FROM tracks
 WHERE (Milliseconds/1000)/60 > 5;
+
+
+--second task
 
 SELECT * 
 CONCAT (firstname, " ", lastname)
