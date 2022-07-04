@@ -6,3 +6,5 @@ lazy val root = (project in file("."))
   .settings(
     name := "Bootcamp"
   )
+// https://mvnrepository.com/artifact/net.debasishg/redisclient
+libraryDependencies += "net.debasishg" %% "redisclient" % "3.42"
